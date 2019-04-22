@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ExtendibleGUIController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+            <Button fx:id="insertButton" layoutX="513.0" layoutY="28.0" mnemonicParsing="false" onAction="#insert" prefHeight="37.0" prefWidth="110.0" stylesheets="@../style/style.css" text="Insert" />
+            <TextField fx:id="nameText" layoutX="191.0" layoutY="28.0" prefHeight="37.0" prefWidth="149.0" promptText="Name" stylesheets="@../style/style.css" />
+            <TextField fx:id="keyText" layoutX="350.0" layoutY="28.0" prefHeight="37.0" prefWidth="149.0" promptText="Key" stylesheets="@../style/style.css" />
+            <TableView fx:id="addressTable" layoutX="14.0" layoutY="77.0" onMouseClicked="#updateBucket" prefHeight="260.0" prefWidth="200.0" stylesheets="@../style/style.css">
+              <columns>
+                <TableColumn fx:id="addressColumn" prefWidth="199.0" text="Address" />
+              </columns>
+            </TableView>
+            <Button fx:id="changeButton" layoutX="104.0" layoutY="349.0" mnemonicParsing="false" onAction="#change" prefHeight="37.0" prefWidth="110.0" stylesheets="@../style/style.css" text="Change" />
+            <TextField fx:id="changeText" layoutX="18.0" layoutY="349.0" prefHeight="37.0" prefWidth="78.0" promptText="Bucket Size" stylesheets="@../style/style.css" />
+            <TextField fx:id="findText" layoutX="236.0" layoutY="349.0" prefHeight="37.0" prefWidth="149.0" promptText="Key" stylesheets="@../style/style.css" />
+            <TableView fx:id="bucketTable" layoutX="234.0" layoutY="109.0" prefHeight="228.0" prefWidth="388.0" stylesheets="@../style/style.css">
+               <columns>
+                  <TableColumn fx:id="bucketColumn" prefWidth="387.0" text="Bucket" />
+               </columns>
+            </TableView>
+            <Label fx:id="local" layoutX="236.0" layoutY="77.0" prefHeight="27.0" prefWidth="104.0" stylesheets="@../style/style.css" text="Local: 1" />
+            <Label fx:id="global" layoutX="18.0" layoutY="31.0" prefHeight="27.0" prefWidth="104.0" stylesheets="@../style/style.css" text="Global: 1" />
+            <Button fx:id="findButton" layoutX="398.0" layoutY="349.0" mnemonicParsing="false" onAction="#find" prefHeight="37.0" prefWidth="110.0" stylesheets="@../style/style.css" text="Find" />
+            <Button fx:id="deleteButton" layoutX="516.0" layoutY="349.0" mnemonicParsing="false" onAction="#delete" prefHeight="37.0" prefWidth="110.0" stylesheets="@../style/style.css" text="Delete" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
