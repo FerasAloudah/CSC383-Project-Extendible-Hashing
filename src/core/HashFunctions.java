@@ -6,7 +6,7 @@ import java.util.List;
 public class HashFunctions {
 
     public static String hash(int key) {
-        String value = Integer.toBinaryString(key % 255);
+        String value = Integer.toBinaryString(key % 256);
         for (int i = value.length(); i < ExtendibleHashing.MAX_GLOBAL; i++) {
             value = "0" + value;
         }
